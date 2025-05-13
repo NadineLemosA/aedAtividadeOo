@@ -13,5 +13,7 @@ public abstract class Produto {
         this.categoria = categoria;
     }
 
+    abstract String getInformacoes();
+
     abstract void cadastrarProduto(int resposta);
 }

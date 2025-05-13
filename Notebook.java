@@ -22,14 +22,18 @@ public class Notebook extends Produto {
     }
 
     @Override
-    public String toString() {
-        String resultado = "PRODUTO CADASTRADO" +
-                "\nTIPO: " + categoria.nome +
+    String getInformacoes() {
+        return "\nTIPO: " + categoria.nome +
                 "\nID: " + categoria.id +
                 "\nMODELO: " + modelo +
                 "\nCOR: " + cor +
-                "\nPREÇO: " + preco +
-                "\nBATERIA: " + tempoDeBateria;
+                "\nPREÇO: R$ " + preco +
+                "\nBATERIA: " + tempoDeBateria + " horas";
+    }
+
+    @Override
+    public String toString() {
+        String resultado = "PRODUTO CADASTRADO" + getInformacoes();
 
         return resultado;
     }

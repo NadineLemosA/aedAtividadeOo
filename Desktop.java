@@ -23,14 +23,18 @@ public class Desktop extends Produto {
     }
 
     @Override
-    public String toString() {
-        String resultado = "PRODUTO CADASTRADO" +
-                "\nTIPO: " + categoria.nome +
+    String getInformacoes() {
+        return "\nTIPO: " + categoria.nome +
                 "\nID: " + categoria.id +
                 "\nMODELO: " + modelo +
                 "\nCOR: " + cor +
-                "\nPREÇO: " + preco +
-                "\nFONTE: " + potenciaDaFonte;
+                "\nPREÇO: R$ " + preco +
+                "\nFONTE: " + potenciaDaFonte + "W";
+    }
+
+    @Override
+    public String toString() {
+        String resultado = "PRODUTO CADASTRADO" + getInformacoes();
 
         return resultado;
     }
